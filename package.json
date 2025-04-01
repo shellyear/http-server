@@ -1,4 +1,9 @@
 {
+  "name": "http-server-from-scratch",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "npx ts-node src/index.ts"
+  },
   "devDependencies": {
     "@types/node": "^22.13.16"
   }
