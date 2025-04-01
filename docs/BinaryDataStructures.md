@@ -195,6 +195,7 @@ const buffer = Buffer.from(uint8Array);
 
 4. ArrayBuffer - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer
 
+5. Buffer - https://nodejs.org/api/buffer.html
 
 
 
