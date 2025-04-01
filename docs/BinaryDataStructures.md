@@ -60,7 +60,7 @@
 - Typed Arrays are used for efficient manipulation of raw binary data. 
 - Typed Arrays are not not subclasses of Array. 
 
-4. ***ArrayBuffer*** is built-in JS object which is used to represent a generic fixed-length raw binary data buffe (represents a specific type of object in the ECMAScript specification).
+4. ***ArrayBuffer*** is built-in JS object which is used to represent a generic fixed-length raw binary data buffer (represents a specific type of object in the ECMAScript specification).
 - For practical purposes, you could consider it as a "built-in class-like" object.
 - An ArrayBuffer is not an array in the way that a typical JavaScript Array is.
 - It is just the low-level storage container for binary data, and specialized views are needed to interpret its content.
