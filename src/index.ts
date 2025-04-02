@@ -11,20 +11,23 @@ const tcpServer = net.createServer((socket: net.Socket) => {
     console.log({ dataBuffer }); // displays the content (Uint8 values) in hexadecimal format because it's a common way to represent raw binary data in Node.js
 
     const headerEndIndex = dataBuffer.indexOf("\r\n\r\n"); // The headers end with \r\n\r\n
-
+    console.log(headerEndIndex);
     // process the HTTP request header
     if (headerEndIndex !== -1) {
-      const requestHeaders: string = dataBuffer
-        .slice(0, headerEndIndex)
-        .toString();
-        console.log({ requestHeaders })
-      //dataBuffer.slice(0, headerEndIndex).toString();
-      const request = chunk.toString(); // Convert buffer (array of bytes) to string (UTF-8 is the default encoding)
-      const path = request.split(" ")[1];
-      const response =
-        path === "/"
-          ? "HTTP/1.1 200 OK\r\n\r\n"
-          : "HTTP/1.1 404 Not Found\r\n\r\n";
+      const dataStr = dataBuffer.toString();
+      const requestLine = dataStr.split("\r\n")[0];
+      const [method, path, version] = requestLine.split(" ");
+
+      const pathSegments = path.split("/");
+      const lastPathSegment = pathSegments[pathSegments.length - 1];
+
+      const response = `HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\nContent-Length: ${lastPathSegment.length}\r\n\r\n${lastPathSegment}`;
+
+      console.log({ pathSegments, lastPathSegment });
+      //   const response =
+      //     path === "/"
+      //       ? "HTTP/1.1 200 OK\r\n\r\n"
+      //       : "HTTP/1.1 404 Not Found\r\n\r\n";
       socket.write(response);
       socket.end(); // sends FIN packet
     }
