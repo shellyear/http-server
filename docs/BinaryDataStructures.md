@@ -49,6 +49,7 @@
 1. ***Array*** is a general-purpose, dynamic array in JavaScript that doesn't deal with raw binary data.
 
 2. ***TypedArray*** serves as the common superclass of all TypedArray subclasses (Uint8Array, Int8Array etc)
+- A TypedArray object describes an array-like view of an underlying binary data buffer(ArrayBuffer). 
 - Think about %TypedArray% as an "abstract class" providing a common interface of utility methods for all typed array subclasses.
 - This constructor is not directly exposed: there is no global TypedArray property. It is only accessible through Object.getPrototypeOf(Int8Array) and similar.
 - All Typed Arrays are part of the JavaScript specification (ECMAScript).They can be used in both browsers and Node.js to handle binary data in JavaScript.
