@@ -23,7 +23,7 @@ const tcpServer = net.createServer((socket: net.Socket) => {
 
       const response = `HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\nContent-Length: ${lastPathSegment.length}\r\n\r\n${lastPathSegment}`;
 
-      console.log({ pathSegments, lastPathSegment });
+      console.log({ path, pathSegments, lastPathSegment });
       //   const response =
       //     path === "/"
       //       ? "HTTP/1.1 200 OK\r\n\r\n"

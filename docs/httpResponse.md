@@ -42,3 +42,8 @@ Content-Length: 3\r\n         // Header that specifies the size of the response 
 // Response body
 abc                           // The string from the request
 ```
+
+
+***Sources***
+1. http responses - https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages#http_responses
+2. http specification - https://datatracker.ietf.org/doc/html/rfc9112#name-message
