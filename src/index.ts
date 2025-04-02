@@ -28,6 +28,7 @@ const tcpServer = net.createServer((socket: net.Socket) => {
       socket.write(response);
       socket.end(); // sends FIN packet
     }
+    accumulatedData = [];
   });
 });
 
