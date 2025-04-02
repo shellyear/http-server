@@ -30,7 +30,11 @@ Accept: */*\r\n              // Header that specifies which media types the clie
 // Request body (empty)
 ```
 
-- Here's an example of an HTTP request (with body)
+- Here's an example of an HTTP response (with body)
+
+```js
+HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\nContent-Length: 3\r\n\r\nabc
+```
 
 ```js
 // Status line
