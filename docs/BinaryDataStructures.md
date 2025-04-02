@@ -84,7 +84,7 @@
  │   Uint8Array     │  │    Int8Array     │  │   Float32Array   │
  └──────────────────┘  └──────────────────┘  └──────────────────┘
 
-- TypedArray itself is an abstract base, not a class you can instantiate.
+- TypedArray itself is an abstract base, not a class you can instantiate. Provides a common interface of utility methods for all typed array subclasses.
 
 - The concrete classes like Uint8Array, Int8Array, Float64Array, etc., are the real classes that you can use in JavaScript.
 
